@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pictures\logo.jpeg" type="image/x-icon">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<style>
+    .faq-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .faq-item {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-item h3 {
+        margin-top: 0;
+    }
+</style>
+<body>
+    <header>
+        <a href="index.html" style="margin-left: 10px"><img src="pictures/logo.jpeg" alt="LOGO" style="border-radius: 50%;" ></a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="blog.html">Blog / News</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="line-heading"><h2 id="faq">FAQ</h2></div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>What is Crownless?</h3>
+                <div class="faq-content">
+                    <p>Crownless is a dynamic dance group that embodies the spirit of creativity, passion, and unity. We are a collective of talented dancers who come together to create captivating performances that inspire and entertain audiences worldwide.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3>Where can I watch Crownless perform?</h3>
+                <div class="faq-content">
+                    <p>You can catch our performances at various events, competitions, and showcases. We also share our dance videos on our social media platforms and YouTube channel. Follow us to stay updated on our latest performances and upcoming events!</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="buttons">
+            <a href="https://forms.gle/tLM3Jg2VNmqYfiCNA" target="_blank">&rarr; You have more questions to ask?</a>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="https://wa.me/60199830889" target="_blank"><img src="pictures/pngimg.com - whatsapp_PNG95167.png" alt="WhatsApp"></a></li>
+                <li><a href="https://www.instagram.com/crownlessd.c" target="_blank"><img src="pictures/pngimg.com - instagram_PNG9.png" alt="Instagram"></a></li>
+                <li><a href="#" target="_blank"><img src="pictures/pngimg.com - tiktok_PNG26.png" alt="Tik Tok"></a></li>
+                <li><a href="#" target="_blank"><img src="pictures/pngimg.com - youtube_PNG102352.png" alt="YouTube"></a></li>
+            </ul>
+        </nav>
+        <h3>© 2025 - 2026 Crownless🤴. All Rights Reserved</h3>
+    </footer>
+
+    <style>
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+            padding: 0 0;
+        }
+
+        .faq-item.active .faq-content {
+            max-height: 400px;
+            padding: 10px 0;
+        }
+
+        .faq-item h3 {
+            cursor: pointer;
+            position: relative;
+            padding-right: 24px;
+        }
+
+        .faq-item h3::after {
+            content: "\25BC";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) rotate(0deg);
+            transition: transform 0.25s ease;
+            font-size: 14px;
+        }
+
+        .faq-item.active h3::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    </style>
+
+    <script>
+        document.querySelectorAll('.faq-item h3').forEach((header) => {
+            header.addEventListener('click', () => {
+                const item = header.closest('.faq-item');
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+    <script src="script4.js"></script>
+</body>
+</html>
